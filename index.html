@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sitewerk. — Professionele website voor je zaak. Vaste prijs, online in één week.</title>
+<meta name="description" content="Een professionele website voor je zaak. Vaste prijzen vanaf €590 excl. btw, online binnen één week na aanlevering. Domeinnaam, hosting en Google-vindbaarheid inbegrepen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&family=Marcellus&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF7;
+  --surface:#FFFFFF;
+  --ink:#181B21;
+  --muted:#565D66;
+  --blue:#1C39A6;
+  --blue-deep:#142C85;
+  --tint:#EEF1FB;
+  --line:#E7E5DF;
+  --max:1080px;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id],header[id]{scroll-margin-top:72px}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Hanken Grotesk",system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--blue);color:#fff}
+a{color:inherit}
+
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.section{padding:110px 0}
+.eyebrow{color:var(--blue);font-weight:500;display:block;margin-bottom:18px}
+.section-title{font-size:clamp(1.9rem,4.2vw,2.7rem);max-width:20ch}
+.section-intro{color:var(--muted);max-width:52ch;margin-top:16px;font-size:1.05rem}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,250,247,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.wordmark{font-weight:800;font-size:1.3rem;text-decoration:none;letter-spacing:-.02em}
+.wordmark .dot{color:var(--blue)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a.plain{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a.plain:hover{color:var(--ink)}
+@media(max-width:720px){.nav-links a.plain{display:none}}
+.nav-cta{
+  text-decoration:none;background:var(--ink);color:#fff;font-weight:600;font-size:.92rem;
+  padding:11px 20px;border-radius:12px;transition:background .2s;
+}
+.nav-cta:hover{background:var(--blue)}
+
+/* ---------- hero ---------- */
+.hero{padding:120px 0 100px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#FFFFFF 0%,var(--bg) 100%)}
+.hero h1{font-size:clamp(2.7rem,6.2vw,4.5rem);max-width:15ch}
+.hero .sub{max-width:52ch;font-size:1.15rem;color:var(--muted);margin:26px 0 38px}
+.hero .sub strong{color:var(--ink);font-weight:700}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;font-size:1rem;
+  padding:16px 30px;border-radius:12px;transition:background .2s, transform .2s, box-shadow .2s;
+}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-deep);transform:translateY(-1px);box-shadow:0 12px 28px rgba(28,57,166,.22)}
+.btn-ghost{border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.hero-proof{
+  margin-top:46px;padding:16px 22px;max-width:560px;
+  border-left:3px solid var(--blue);background:var(--tint);border-radius:0 12px 12px 0;
+  color:var(--ink);font-size:.98rem;
+}
+.hero-proof span{color:var(--blue);font-weight:700}
+
+/* hero grid + phone mockup */
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:44px}}
+.phone-col{justify-self:end}
+@media(max-width:920px){.phone-col{justify-self:start}}
+.phone{
+  width:288px;background:#101318;border-radius:42px;padding:10px;
+  box-shadow:0 34px 80px rgba(24,27,33,.28), 0 4px 14px rgba(24,27,33,.18);
+}
+@media(max-width:920px){.phone{width:256px}}
+.screen{
+  border-radius:33px;overflow:hidden;background:#F5EFE6;aspect-ratio:9/19.2;
+  display:flex;flex-direction:column;font-family:"Mulish","Hanken Grotesk",sans-serif;
+}
+.m-status{height:26px;display:flex;align-items:center;justify-content:center}
+.m-status i{width:74px;height:16px;background:#101318;border-radius:999px;display:block}
+.m-nav{display:flex;justify-content:space-between;align-items:center;padding:8px 14px 6px}
+.m-brand{font-family:"Marcellus",serif;font-size:11px;color:#26241F}
+.m-pill{font-size:7px;font-weight:700;background:#2F4A3E;color:#F5EFE6;padding:4px 8px;border-radius:999px}
+.m-hero{padding:14px 14px 12px}
+.m-over{font-size:6px;letter-spacing:.16em;text-transform:uppercase;color:#2F4A3E;font-weight:700;margin-bottom:5px}
+.m-h1{font-family:"Marcellus",serif;font-size:17px;line-height:1.15;color:#26241F;max-width:12ch}
+.m-sub{font-size:7.5px;color:#6B6558;margin:6px 0 9px;max-width:24ch;line-height:1.5}
+.m-cta{display:inline-block;font-size:8px;font-weight:700;background:#2F4A3E;color:#F5EFE6;padding:6px 11px;border-radius:999px}
+.m-visual{
+  margin:4px 14px 12px;height:96px;border-radius:60px 60px 10px 10px;
+  background:
+    radial-gradient(120% 90% at 20% 10%, #3B5C4D 0%, transparent 55%),
+    radial-gradient(120% 100% at 85% 90%, #C9B48E 0%, transparent 50%),
+    linear-gradient(160deg,#2F4A3E 0%,#43614F 55%,#6E8574 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.m-visual span{font-family:"Marcellus",serif;color:rgba(245,239,230,.92);font-size:30px}
+.m-menu{background:#FFFDF9;border-top:1px solid #E5DCCC;padding:11px 14px;flex:1}
+.m-menu h4{font-family:"Marcellus",serif;font-size:9px;color:#2F4A3E;margin-bottom:6px}
+.m-row{display:flex;align-items:baseline;gap:5px;font-size:7.5px;color:#26241F;padding:4.5px 0;border-bottom:1px solid #EFE8D9}
+.m-row i{flex:1;border-bottom:1px dotted #D9CFBB;transform:translateY(-2px)}
+.m-row b{font-weight:700}
+.phone-cap{
+  margin-top:18px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center;
+}
+.phone-cap a{color:var(--blue)}
+
+/* ---------- audience band ---------- */
+.band{background:var(--surface);border-bottom:1px solid var(--line);padding:72px 0}
+.band h2{font-size:clamp(1.4rem,2.8vw,1.85rem);font-weight:700;max-width:34ch;letter-spacing:-.015em;line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{
+  font-size:.9rem;font-weight:500;color:var(--muted);
+  border:1px solid var(--line);background:var(--bg);
+  padding:8px 16px;border-radius:999px;
+}
+.chip.you{color:var(--blue);border-color:var(--blue);background:var(--tint);font-weight:600}
+
+/* ---------- features ---------- */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+@media(max-width:900px){.features{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.features{grid-template-columns:1fr}}
+.feature{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 28px;transition:box-shadow .25s, transform .25s;
+}
+.feature:hover{box-shadow:0 14px 34px rgba(24,27,33,.07);transform:translateY(-2px)}
+.icon{
+  width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+}
+.icon svg{width:22px;height:22px}
+.feature h3{font-size:1.08rem;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.feature p{font-size:.95rem;color:var(--muted)}
+
+/* ---------- process ---------- */
+.process{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+@media(max-width:900px){.steps{grid-template-columns:1fr}}
+.step{
+  background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;
+}
+.step .mono{color:var(--blue);display:block;margin-bottom:16px}
+.step h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.step p{font-size:.95rem;color:var(--muted)}
+.process-note{margin-top:26px;color:var(--muted);font-size:.95rem;max-width:60ch}
+
+/* ---------- pricing ---------- */
+.price-area{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:20px;margin-top:52px;align-items:stretch}
+@media(max-width:980px){.price-area{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.price-area{grid-template-columns:1fr}}
+.tier{
+  background:var(--surface);border:1px solid var(--line);border-radius:20px;
+  padding:36px 30px;display:flex;flex-direction:column;position:relative;
+}
+.tier .mono{color:var(--muted)}
+.tier-price{font-size:clamp(2.5rem,4.6vw,3.3rem);font-weight:800;letter-spacing:-.03em;line-height:1;margin:14px 0 4px}
+.tier-meta{font-size:.9rem;color:var(--muted)}
+.tier-list{list-style:none;margin-top:24px}
+.tier-list li{padding:10px 0;border-top:1px solid var(--line);font-size:.94rem;display:flex;gap:11px;align-items:flex-start}
+.tier-list svg{width:17px;height:17px;flex:none;margin-top:4px;color:var(--blue)}
+.tier--featured{
+  background:var(--blue);color:#fff;border:none;
+  background-image:linear-gradient(145deg,#1F3FB5 0%,#152E8C 100%);
+  box-shadow:0 24px 60px rgba(20,44,133,.28);
+}
+.tier--featured .mono{color:rgba(255,255,255,.65)}
+.tier--featured .tier-meta{color:rgba(255,255,255,.82)}
+.tier--featured .tier-list li{border-top:1px solid rgba(255,255,255,.16)}
+.tier--featured .tier-list svg{color:#A9BAF7}
+.badge{
+  position:absolute;top:-13px;left:30px;background:var(--ink);color:#fff;
+  font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:6px 12px;border-radius:999px;
+}
+.opt-lead{font-size:.9rem;color:var(--muted);margin:12px 0 4px}
+.menu{list-style:none}
+.menu li{
+  display:flex;justify-content:space-between;gap:16px;align-items:flex-start;
+  padding:12px 0;border-top:1px solid var(--line);font-size:.95rem;
+}
+.menu li span.p{font-family:"IBM Plex Mono",monospace;font-size:.84rem;color:var(--blue);white-space:nowrap;margin-top:2px}
+.menu .cap{display:block;font-size:.79rem;color:var(--muted);margin-top:2px}
+.btw-note{margin-top:auto;padding-top:18px;font-size:.8rem;color:var(--muted)}
+.yearly{
+  margin-top:22px;background:var(--tint);border:1px solid var(--line);border-radius:14px;
+  padding:16px 20px;font-size:.95rem;
+}
+
+/* ---------- trust ---------- */
+.trust{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:820px){.trust-grid{grid-template-columns:1fr;gap:28px}}
+.trust h2{font-size:clamp(1.8rem,3.8vw,2.4rem);max-width:16ch}
+.trust p{color:var(--muted);margin-top:16px;max-width:50ch}
+.trust-points{list-style:none;display:grid;gap:14px}
+.trust-points li{
+  display:flex;gap:14px;align-items:flex-start;background:var(--bg);
+  border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:.97rem;
+}
+.trust-points svg{width:20px;height:20px;flex:none;color:var(--blue);margin-top:3px}
+
+/* ---------- faq ---------- */
+.faq{max-width:760px;margin-top:44px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:0 24px}
+.faq summary{
+  cursor:pointer;list-style:none;padding:20px 0;font-weight:600;font-size:1.02rem;
+  display:flex;justify-content:space-between;gap:20px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--blue);font-size:1.15rem;flex:none;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:60ch}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:#fff}
+.contact h2{font-size:clamp(2.1rem,4.8vw,3.2rem)}
+.contact .eyebrow{color:#9FB1F2}
+.contact p.lead{color:#B8BDC6;max-width:50ch;margin-top:18px}
+.form{margin-top:44px;max-width:560px;display:grid;gap:16px}
+.field label{display:block;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#8C93A0;margin-bottom:8px}
+.field input,.field textarea{
+  width:100%;background:#22262E;border:1px solid #383E49;color:#fff;
+  padding:14px 16px;border-radius:12px;font:inherit;font-size:.98rem;
+}
+.field input:focus,.field textarea:focus{outline:2px solid #5D7BE8;outline-offset:1px;border-color:transparent}
+.form .btn-primary{border:none;cursor:pointer;font:inherit;font-weight:600;justify-self:start}
+.alt{margin-top:26px;font-size:.92rem;color:#8C93A0}
+.alt a{color:#9FB1F2}
+
+/* ---------- footer ---------- */
+.footer{background:var(--ink);color:#787F8B;border-top:1px solid #262B33;padding:30px 0;font-size:.85rem}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.footer .wordmark{color:#fff;font-size:1.05rem}
+
+/* ---------- motion & a11y ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn,.nav-cta,.feature{transition:none}
+}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Hoofdnavigatie">
+  <div class="nav-inner">
+    <a class="wordmark" href="#top">sitewerk<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a class="plain" href="#krijg">Wat je krijgt</a>
+      <a class="plain" href="#prijs">Prijs</a>
+      <a class="plain" href="#vragen">Vragen</a>
+      <a class="nav-cta" href="#start">Start je site</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow mono reveal">Vaste prijzen · Online in één week · Eén aanspreekpunt</span>
+      <h1 class="reveal">Een professionele website voor je zaak.</h1>
+      <p class="sub reveal">Online binnen één week na aanlevering van je teksten en foto's. Vaste prijzen <strong>vanaf €590 excl. btw</strong> — inclusief domeinnaam, hosting en Google-vindbaarheid.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary" href="#start">Start je site</a>
+        <a class="btn btn-ghost" href="/voorbeeld/">Bekijk een voorbeeld</a>
+      </div>
+      <p class="hero-proof reveal"><span>Je bekijkt nu zelf een voorbeeld</span> — deze pagina is gebouwd zoals die van jou straks: snel, helder en op elk toestel.</p>
+    </div>
+    <div class="phone-col reveal">
+      <div class="phone" role="img" aria-label="Voorbeeld van een klantensite op een smartphone: Kapsalon Marie">
+        <div class="screen" aria-hidden="true">
+          <div class="m-status"><i></i></div>
+          <div class="m-nav">
+            <span class="m-brand">Kapsalon Marie</span>
+            <span class="m-pill">Bel voor afspraak</span>
+          </div>
+          <div class="m-hero">
+            <span class="m-over">Dames · Heren · Kids — Nijlen</span>
+            <div class="m-h1">Goed geknipt buitenkomen.</div>
+            <p class="m-sub">Een klein salon met alle tijd voor jou. Eerlijk advies, rustige sfeer.</p>
+            <span class="m-cta">Bel 0470 12 34 56</span>
+          </div>
+          <div class="m-visual"><span>M</span></div>
+          <div class="m-menu">
+            <h4>Prijslijst</h4>
+            <div class="m-row"><span>Knippen</span><i></i><b>€38</b></div>
+            <div class="m-row"><span>Wassen · knippen · brushen</span><i></i><b>€48</b></div>
+            <div class="m-row"><span>Kleuren</span><i></i><b>vanaf €65</b></div>
+            <div class="m-row"><span>Heren</span><i></i><b>€26</b></div>
+          </div>
+        </div>
+      </div>
+      <p class="phone-cap"><a href="/voorbeeld/">Bekijk de volledige voorbeeldsite →</a></p>
+    </div>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Gemaakt voor zelfstandigen en kleine zaken die gevonden willen worden — zonder er een project van te maken.</h2>
+    <div class="chips" aria-label="Voorbeelden van zaken">
+      <span class="chip">kapper</span>
+      <span class="chip">garagist</span>
+      <span class="chip">bakker</span>
+      <span class="chip">schoonheidssalon</span>
+      <span class="chip">aannemer</span>
+      <span class="chip">tuinaanlegger</span>
+      <span class="chip">kinesist</span>
+      <span class="chip">traiteur</span>
+      <span class="chip you">jouw zaak</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="krijg">
+  <div class="wrap">
+    <span class="eyebrow mono reveal">Wat je krijgt</span>
+    <h2 class="section-title reveal">Alles wat een klant zoekt. Niets wat je niet nodig hebt.</h2>
+    <div class="features reveal">
+      <div class="feature">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></div>
+        <h3>Op maat van jouw zaak</h3>
+        <p>Geen template van de plank. Opgebouwd rond jouw verhaal, jouw kleuren en jouw aanbod.</p>
+      </div>
+      <div class="feature">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+        <h3>Perfect op elke gsm</h3>
+        <p>Het grootste deel van je klanten zoekt je op hun telefoon. Daar begint het ontwerp.</p>
+      </div>
+      <div class="feature">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20.5 20.5 16 16"/></svg></div>
+        <h3>Vindbaar op Google</h3>
+        <p>Technisch correct opgezet, inclusief je Google Business-profiel. Zo word je gevonden op je naam en in je buurt.</p>
+      </div>
+      <div class="feature">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div>
+        <h3>Contact zonder drempel</h3>
+        <p>Klikbare telefoon- en WhatsApp-knop, contactformulier, openingsuren en routekaart. Eén tik en de klant belt.</p>
+      </div>
+      <div class="feature">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5s1.3-6.2 3.8-8.5Z"/></svg></div>
+        <h3>Domeinnaam &amp; hosting</h3>
+        <p>Je eigen .be-adres, het eerste jaar hosting én een doorstuuradres (info@jouwzaak.be) zitten in de prijs.</p>
+      </div>
+      <div class="feature">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5"/></svg></div>
+        <h3>Eén feedbackronde</h3>
+        <p>Jij bekijkt het voorstel, geeft één keer opmerkingen door, ik werk af. Duidelijk voor ons beiden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="wrap">
+    <span class="eyebrow mono reveal">Zo werkt het</span>
+    <h2 class="section-title reveal">Van intake tot online in drie stappen.</h2>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="mono">Stap 1</span>
+        <h3>Jij levert aan</h3>
+        <p>Geen schrijfwerk nodig: je beantwoordt een tiental eenvoudige vragen over je zaak en stuurt je foto's en logo door via WhatsApp of mail. De bouw start zodra alles binnen is — dáárom lukt het in één week.</p>
+      </div>
+      <div class="step">
+        <span class="mono">Stap 2</span>
+        <h3>Ik bouw</h3>
+        <p>Binnen enkele dagen staat je voorstel op een testadres. Je bekijkt het rustig op je gsm en computer.</p>
+      </div>
+      <div class="step">
+        <span class="mono">Stap 3</span>
+        <h3>Feedback &amp; online</h3>
+        <p>Eén ronde opmerkingen, ik werk af en je site gaat live op je eigen domeinnaam. Je ontvangt een factuur, excl. btw.</p>
+      </div>
+    </div>
+    <p class="process-note reveal">Geen vergaderingen, geen tussenpersonen: je werkt van begin tot einde rechtstreeks met de bouwer van je site.</p>
+  </div>
+</section>
+
+<section class="section" id="prijs">
+  <div class="wrap">
+    <span class="eyebrow mono reveal">Transparante prijzen</span>
+    <h2 class="section-title reveal">Twee pakketten. Vaste prijzen. Geen verrassingen.</h2>
+    <div class="price-area">
+      <div class="tier reveal">
+        <span class="mono">Start</span>
+        <div class="tier-price">€590</div>
+        <p class="tier-meta">excl. btw · eenmalig</p>
+        <ul class="tier-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén sterke pagina</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Domeinnaam en hosting, eerste jaar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Google en Google Business opgezet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén feedbackronde</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Online binnen één week na aanlevering</li>
+        </ul>
+      </div>
+      <div class="tier tier--featured reveal">
+        <span class="badge">Meest gekozen</span>
+        <span class="mono">Compleet</span>
+        <div class="tier-price">€950</div>
+        <p class="tier-meta">excl. btw · eenmalig</p>
+        <ul class="tier-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Tot drie pagina's — bv. home, aanbod, contact</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén extra taal inbegrepen (bv. Frans of Engels)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Domeinnaam en hosting, eerste jaar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Google en Google Business opgezet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén feedbackronde</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Online binnen één week na aanlevering</li>
+        </ul>
+      </div>
+      <div class="tier reveal">
+        <span class="mono">Opties</span>
+        <p class="opt-lead">Alleen als je het nodig hebt.</p>
+        <ul class="menu">
+          <li><div>Extra pagina</div> <span class="p">€150</span></li>
+          <li><div>Online afspraken boeken<span class="cap">koppeling met je boekingstool</span></div> <span class="p">€150</span></li>
+          <li><div>Zakelijk e-mailadres<span class="cap">info@jouwzaak.be</span></div> <span class="p">€75</span></li>
+          <li><div>QR-kaartje voor Google-reviews<span class="cap">klant scant en laat meteen een review achter</span></div> <span class="p">€75</span></li>
+          <li><div>Betaalknop<span class="cap">bv. cadeaubonnen verkopen, zonder webshop</span></div> <span class="p">€75</span></li>
+          <li><div>QR-menukaart voor horeca<span class="cap">je menu op tafel via een QR-code</span></div> <span class="p">€95</span></li>
+          <li><div>Extra taal<span class="cap">bv. Frans of Engels erbij</span></div> <span class="p">€50</span></li>
+          <li><div>Teksten volledig laten schrijven</div> <span class="p">€150</span></li>
+          <li><div>Meerwerk per uur</div> <span class="p">€95/u</span></li>
+        </ul>
+        <p class="btw-note">Compleet bevat al één extra taal; "extra taal" geldt voor Start of een derde taal. Online afspraken, zakelijk e-mailadres en betaalknop zijn installaties bij een externe dienst (bv. Salonized, Google Workspace, Mollie) — die accounts staan op jouw naam en sluit je zelf rechtstreeks af. Alle prijzen excl. btw, meerwerk altijd vooraf afgesproken (min. 30 min).</p>
+      </div>
+    </div>
+    <p class="yearly reveal"><strong>Beide pakketten: daarna €180 per jaar</strong> — hosting, domeinnaam en twee kleine aanpassingen per jaar inbegrepen.</p>
+  </div>
+</section>
+
+<section class="section trust">
+  <div class="wrap trust-grid">
+    <div class="reveal">
+      <span class="eyebrow mono">Eén aanspreekpunt</span>
+      <h2>Je werkt rechtstreeks met de bouwer.</h2>
+      <p>Geen accountmanagers, geen offertetraject, geen doorschuiven. Ik ben zelf ondernemer en weet wat een zaak wél en niet nodig heeft om klanten te overtuigen. Kort op de bal, klare afspraken.</p>
+    </div>
+    <ul class="trust-points reveal">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Antwoord binnen één werkdag, ook na oplevering</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 4.5 7v5c0 4.5 3.2 7.6 7.5 8.5 4.3-.9 7.5-4 7.5-8.5V7L12 3.5Z"/></svg>Vaste prijs vooraf — geen verrassingen achteraf</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h9"/></svg>Klare afspraken over wat inbegrepen is en wat niet</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="9" rx="2"/></svg>Privacyverklaring inbegrepen — en geen cookiebanner nodig, want geen trackingcookies</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.5 12.5 8-8m-2.5 1.5 3 3m-6.5.5 2.5 2.5"/></svg>Site én domeinnaam zijn jouw eigendom — je zit nergens aan vast</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="vragen">
+  <div class="wrap">
+    <span class="eyebrow mono reveal">Goeie vragen</span>
+    <h2 class="section-title reveal">Wat klanten meestal willen weten.</h2>
+    <div class="faq reveal">
+      <details>
+        <summary>Ik heb nog geen teksten of foto's.</summary>
+        <p>Teksten schrijf ik voor je uit op basis van een kort telefoongesprek (+€150). Voor foto's volstaan goede gsm-foto's meestal — ik help je kiezen welke werken.</p>
+      </details>
+      <details>
+        <summary>Kan ik later iets laten aanpassen?</summary>
+        <p>Twee kleine aanpassingen per jaar zitten in je jaarbedrag: openingsuren, een prijs, een foto. Grotere wijzigingen gebeuren aan €95 per uur, altijd vooraf afgesproken.</p>
+      </details>
+      <details>
+        <summary>Hoeveel pagina's krijg ik?</summary>
+        <p>Start is één sterke pagina; Compleet gaat tot drie — bijvoorbeeld home, je aanbod en contact. Extra pagina's kunnen altijd, aan €150 per stuk.</p>
+      </details>
+      <details>
+        <summary>Kunnen klanten online een afspraak boeken?</summary>
+        <p>Ja. Met de optie online afspraken (€150) koppel ik je site aan een boekingstool zoals Salonized of Calendly. Het abonnement van die tool sluit je zelf rechtstreeks af — zo betaal je nooit een tussenpersoon.</p>
+      </details>
+      <details>
+        <summary>Krijg ik een e-mailadres op mijn domein?</summary>
+        <p>Een doorstuuradres (info@jouwzaak.be naar je bestaande mailbox) zit gratis in elk pakket. Wil je een volledige mailbox, dan installeer ik die voor €75 bij een provider naar keuze — dat abonnement betaal je rechtstreeks.</p>
+      </details>
+      <details>
+        <summary>Ik heb al een website — kan je die vernieuwen?</summary>
+        <p>Ja, dat is zelfs de meest voorkomende start. Ik bouw je site opnieuw binnen het gewone pakket, en je bestaande domeinnaam verhuist gewoon mee, zonder onderbreking.</p>
+      </details>
+      <details>
+        <summary>Van wie is de website daarna?</summary>
+        <p>Van jou. Site, teksten en domeinnaam zijn volledig jouw eigendom. Het jaarbedrag is jaarlijks opzegbaar — stop je, dan krijg je je domein en bestanden netjes mee.</p>
+      </details>
+      <details>
+        <summary>Kan ik iets verkopen via mijn site, zoals cadeaubonnen?</summary>
+        <p>Zonder webshop, ja. Met de betaalknop (€75) plaats ik een beveiligde betaallink van Mollie of Stripe: je klant betaalt met Bancontact of kaart op hún beveiligde pagina, en het geld komt rechtstreeks op jouw rekening. Jij verstuurt daarna zelf de bon.</p>
+      </details>
+      <details>
+        <summary>Ik wil een webshop.</summary>
+        <p>Daarvoor ben ik niet de juiste partner. Ik focus bewust op zakelijke websites zonder verkoopmodule — dat doe ik snel en goed; één betaalknop voor bv. cadeaubonnen kan wél (zie hierboven). Voor een echte webshop verwijs ik je met plezier door.</p>
+      </details>
+      <details>
+        <summary>Wat heb je van mij nodig om te starten?</summary>
+        <p>Je beantwoordt een korte vragenlijst in gewone mensentaal — wie je bent, wat je doet, je prijzen en openingsuren — en stuurt je foto's en logo door. Geen schrijfwerk: je antwoorden vormen de basis van je webteksten. Zodra alles binnen is, sta je een week later online.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="start">
+  <div class="wrap">
+    <span class="eyebrow mono reveal">Start je site</span>
+    <h2 class="reveal">Vertel me over je zaak.</h2>
+    <p class="lead reveal">Vul dit in en je hoort binnen één werkdag van me. Vrijblijvend — je beslist pas na ons eerste contact.</p>
+    <form class="form reveal" name="intake" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="intake">
+      <p hidden><label>Niet invullen: <input name="bot-field"></label></p>
+      <div class="field">
+        <label for="naam">Je naam</label>
+        <input id="naam" name="naam" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="zaak">Je zaak</label>
+        <input id="zaak" name="zaak" type="text" autocomplete="organization" required>
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="tel">Telefoon (optioneel)</label>
+        <input id="tel" name="telefoon" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="bericht">Vertel kort iets over je zaak</label>
+        <textarea id="bericht" name="bericht" rows="4"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Verstuur — je hoort van me</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="wordmark">sitewerk<span class="dot">.</span></span>
+    <span>BTW BE 0452.335.546 · Deze pagina is zelf een voorbeeld van mijn werk.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12});
+  els.forEach(function(el,i){
+    el.style.transitionDelay = Math.min(i%4*70, 280) + 'ms';
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
