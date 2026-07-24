@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prijslijst — Kapsalon Marie · Nijlen</title>
+<meta name="description" content="Alle prijzen van Kapsalon Marie in Nijlen: dames, heren en kids. Enkel op afspraak — bel 0470 12 34 56.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#F5EFE6;
+  --linen:#FFFDF9;
+  --ink:#26241F;
+  --soft:#6B6558;
+  --green:#2F4A3E;
+  --green-deep:#243B31;
+  --line:#E5DCCC;
+  --max:1000px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--sand);color:var(--ink);
+  font-family:"Mulish",system-ui,sans-serif;font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--green);color:#fff}
+a{color:inherit}
+h1,h2,h3{font-family:"Marcellus",serif;font-weight:400;line-height:1.12;letter-spacing:.01em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.overline{
+  font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--green);font-weight:700;display:block;margin-bottom:18px;
+}
+.demo-badge{
+  position:fixed;top:14px;right:14px;z-index:90;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+  background:var(--ink);color:var(--sand);padding:7px 13px;border-radius:999px;opacity:.85;
+}
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,239,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:"Marcellus",serif;font-size:1.35rem;text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:22px}
+.nav-link{text-decoration:none;font-size:.95rem;font-weight:600;color:var(--soft)}
+.nav-link:hover{color:var(--ink)}
+.nav-cta{
+  text-decoration:none;background:var(--green);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 20px;border-radius:999px;transition:background .2s;
+}
+.nav-cta:hover{background:var(--green-deep)}
+.page-head{padding:80px 0 10px}
+.page-head h1{font-size:clamp(2.4rem,5.5vw,3.6rem)}
+.page-head p{color:var(--soft);margin-top:14px;max-width:50ch}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:14px}
+@media(max-width:760px){.menu-grid{grid-template-columns:1fr;gap:36px}}
+.menu h3{font-size:1.35rem;margin-bottom:18px;color:var(--green)}
+.menu ul{list-style:none}
+.menu li{
+  display:flex;align-items:baseline;gap:10px;padding:12px 0;font-size:1rem;
+  border-bottom:1px solid var(--line);
+}
+.menu li .dots{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-4px)}
+.menu li .p{font-weight:700;white-space:nowrap}
+.menu-note{margin-top:26px;color:var(--soft);font-size:.92rem;max-width:56ch}
+.book{text-align:center;background:var(--green);color:var(--sand)}
+.book .overline{color:#CBB88F}
+.book h2{font-size:clamp(2rem,5vw,3rem);max-width:16ch;margin:0 auto}
+.book p{color:rgba(245,239,230,.85);margin:16px auto 30px;max-width:44ch}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;
+  padding:16px 28px;border-radius:999px;transition:background .2s, transform .2s;
+  background:var(--sand);color:var(--ink);
+}
+.btn:hover{transform:translateY(-1px)}
+.footer{background:var(--linen);border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--soft)}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.footer a{color:var(--green);font-weight:600;text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<span class="demo-badge">Voorbeeldsite</span>
+
+<nav class="nav" aria-label="Hoofdnavigatie">
+  <div class="nav-inner">
+    <a class="brand" href="../">Kapsalon Marie</a>
+    <div class="nav-right">
+      <a class="nav-link" href="../">Home</a>
+      <a class="nav-cta" href="tel:+32470123456">Bel voor afspraak</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="overline reveal">Prijslijst</span>
+    <h1 class="reveal">Heldere prijzen,<br>geen verrassingen.</h1>
+    <p class="reveal">Alles op een rijtje — zo weet je vooraf exact waar je aan toe bent. Enkel op afspraak.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="menu-grid reveal">
+      <div class="menu">
+        <h3>Dames</h3>
+        <ul>
+          <li>Knippen <span class="dots"></span> <span class="p">€38</span></li>
+          <li>Wassen · knippen · brushen <span class="dots"></span> <span class="p">€48</span></li>
+          <li>Brushing <span class="dots"></span> <span class="p">€28</span></li>
+          <li>Kleuren <span class="dots"></span> <span class="p">vanaf €65</span></li>
+          <li>Balayage <span class="dots"></span> <span class="p">vanaf €95</span></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h3>Heren &amp; kids</h3>
+        <ul>
+          <li>Heren knippen <span class="dots"></span> <span class="p">€26</span></li>
+          <li>Tondeuse <span class="dots"></span> <span class="p">€18</span></li>
+          <li>Baard <span class="dots"></span> <span class="p">€12</span></li>
+          <li>Kids tot 12 jaar <span class="dots"></span> <span class="p">€18</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="menu-note reveal">Kleurwerk bespreken we altijd eerst samen, zodat je vooraf exact weet wat het kost. Prijzen kunnen aangepast worden bij extra lang of dik haar — ook dat hoor je vooraf.</p>
+  </div>
+</section>
+
+<section class="section book">
+  <div class="wrap">
+    <span class="overline reveal">Afspraak maken</span>
+    <h2 class="reveal">Iets voor jou tussen gezien?</h2>
+    <p class="reveal">Bel of stuur een sms — ik antwoord tussen twee klanten door.</p>
+    <div class="reveal"><a class="btn" href="tel:+32470123456">Bel 0470 12 34 56</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>Kapsalon Marie · Dorpsstraat 12, 2560 Nijlen</span>
+    <span>Fictieve voorbeeldsite · Website door <a href="/">sitewerk.</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12});
+  els.forEach(function(el,i){
+    el.style.transitionDelay = Math.min(i%4*70, 280) + 'ms';
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
