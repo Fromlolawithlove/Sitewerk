@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sitewerk. — Professionele website voor je zaak. Vaste prijs, online in één week.</title>
+<title>Sitewerk | Professionele website voor je zaak, vaste prijs, online in één week</title>
 <meta name="description" content="Een professionele website voor je zaak. Vaste prijzen vanaf €490 excl. btw, online binnen één week na aanlevering. Domeinnaam, hosting en Google-vindbaarheid inbegrepen.">
 <link rel="canonical" href="https://sitewerk.be/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="sitewerk">
 <meta property="og:locale" content="nl_BE">
-<meta property="og:title" content="Een professionele website voor je zaak — vaste prijs, online in één week">
-<meta property="og:description" content="Vaste prijzen vanaf €490 excl. btw — inclusief domeinnaam, hosting en Google-vindbaarheid.">
+<meta property="og:title" content="Een professionele website voor je zaak. Vaste prijs, online in één week.">
+<meta property="og:description" content="Vaste prijzen vanaf €490 excl. btw, inclusief domeinnaam, hosting en Google-vindbaarheid.">
 <meta property="og:url" content="https://sitewerk.be/">
 <meta property="og:image" content="https://sitewerk.be/og.png">
 <meta property="og:image:width" content="1200">
@@ -78,7 +78,14 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a.plain{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted);transition:color .2s}
 .nav-links a.plain:hover{color:var(--ink)}
-@media(max-width:720px){.nav-links a.plain{display:none}}
+.nav-links a.plain.actief{color:var(--ink);font-weight:700}
+@media(max-width:560px){
+  .nav-links{gap:16px}
+  .nav-links a.plain{font-size:.88rem}
+  .nav-cta{padding:10px 14px;font-size:.85rem}
+  .nav-inner{padding:14px 16px}
+  .wordmark img{height:26px!important}
+}
 .nav-cta{
   text-decoration:none;background:var(--ink);color:#fff;font-weight:600;font-size:.92rem;
   padding:11px 20px;border-radius:12px;transition:background .2s;
@@ -252,6 +259,16 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
 .calc h3{font-size:1.2rem;font-weight:800;letter-spacing:-.015em;margin-bottom:4px}
 .calc .lead{font-size:.92rem;color:var(--muted);margin-bottom:20px}
 .calc fieldset{border:none;margin-bottom:20px}
+.opties{border:1px solid var(--line);border-radius:14px;margin-bottom:20px;background:var(--bg)}
+.opties summary{
+  cursor:pointer;list-style:none;padding:15px 18px;font-weight:600;font-size:.96rem;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.opties summary::-webkit-details-marker{display:none}
+.opties summary span{font-weight:500;font-size:.86rem;color:var(--blue)}
+.opties summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--blue);font-size:1.15rem;transition:transform .2s}
+.opties[open] summary::after{transform:rotate(45deg)}
+.opties fieldset{padding:0 18px 8px;margin-bottom:0}
 .calc legend{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
 .opt{
   display:flex;gap:12px;align-items:flex-start;cursor:pointer;
@@ -340,11 +357,9 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
   <div class="nav-inner">
     <a class="wordmark" href="#top"><img src="/logo.png" alt="Sitewerk" style="height:30px;display:block"></a>
     <div class="nav-links">
-      <a class="plain" href="#krijg">Wat je krijgt</a>
-      <a class="plain" href="#prijs">Prijs</a>
+      <a class="plain actief" href="#top">Websites</a>
       <a class="plain" href="/automatisaties/">Automatisaties</a>
-      <a class="plain" href="#vragen">Vragen</a>
-      <a class="nav-cta" href="#start">Start je site</a>
+      <a class="nav-cta" href="#start">Vraag het aan</a>
     </div>
   </div>
 </nav>
@@ -354,12 +369,12 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div>
       <span class="eyebrow mono reveal">Vaste prijzen · Online in één week · Eén aanspreekpunt</span>
       <h1 class="reveal">Een professionele website voor je zaak.</h1>
-      <p class="sub reveal">Online binnen één week na aanlevering van je teksten en foto's. Vaste prijzen <strong>vanaf €490 excl. btw</strong> — inclusief domeinnaam, hosting en Google-vindbaarheid.</p>
+      <p class="sub reveal">Online binnen één week na aanlevering van je teksten en foto's. Vaste prijzen <strong>vanaf €490 excl. btw</strong>, inclusief domeinnaam, hosting en Google-vindbaarheid.</p>
       <div class="cta-row reveal">
         <a class="btn btn-primary" href="#start">Start je site</a>
         <a class="btn btn-ghost" href="/voorbeeld/">Bekijk een voorbeeld</a>
       </div>
-      <p class="hero-proof reveal"><span>Je bekijkt nu zelf een voorbeeld</span> — deze pagina is gebouwd zoals die van jou straks: snel, helder en op elk toestel.</p>
+      <p class="hero-proof reveal"><span>Je bekijkt nu zelf een voorbeeld.</span> Deze pagina is gebouwd zoals die van jou straks: snel, helder en op elk toestel.</p>
     </div>
     <div class="phone-col reveal">
       <div class="phone" role="img" aria-label="Voorbeeld van een klantensite op een smartphone: Kapsalon Marie">
@@ -370,7 +385,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
             <span class="m-pill">Bel voor afspraak</span>
           </div>
           <div class="m-hero">
-            <span class="m-over">Dames · Heren · Kids — Nijlen</span>
+            <span class="m-over">Dames · Heren · Kids · Nijlen</span>
             <div class="m-h1">Goed geknipt buitenkomen.</div>
             <p class="m-sub">Een klein salon met alle tijd voor jou. Eerlijk advies, rustige sfeer.</p>
             <span class="m-cta">Bel 0470 12 34 56</span>
@@ -392,7 +407,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
 
 <section class="band">
   <div class="wrap reveal">
-    <h2>Gemaakt voor zelfstandigen en kleine zaken die gevonden willen worden — zonder er een project van te maken.</h2>
+    <h2>Gemaakt voor zelfstandigen en kleine zaken die gevonden willen worden, zonder er een project van te maken.</h2>
     <div class="chips" aria-label="Voorbeelden van zaken">
       <span class="chip">kapper</span>
       <span class="chip">garagist</span>
@@ -435,12 +450,12 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       <div class="feature">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5s1.3-6.2 3.8-8.5Z"/></svg></div>
         <h3>Domeinnaam &amp; hosting</h3>
-        <p>Je eigen .be-adres, het eerste jaar hosting én een doorstuuradres (info@jouwzaak.be) zitten in de prijs.</p>
+        <p>Je eigen .be-adres en het eerste jaar hosting zitten in de prijs. Mails aan info@jouwzaak.be komen gewoon binnen op het adres dat je vandaag al gebruikt.</p>
       </div>
       <div class="feature">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5"/></svg></div>
         <h3>Eén feedbackronde</h3>
-        <p>Jij bekijkt het voorstel rustig en bundelt al je opmerkingen in één lijstje; ik werk af. Duidelijk voor ons beiden.</p>
+        <p>Je bekijkt je site rustig en laat weten wat er anders mag. Ik pas het aan tot het goed zit.</p>
       </div>
     </div>
   </div>
@@ -454,7 +469,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       <div class="step">
         <span class="mono">Stap 1</span>
         <h3>Jij levert aan</h3>
-        <p>Geen schrijfwerk nodig: je beantwoordt een tiental eenvoudige vragen over je zaak en mailt je foto's en logo gewoon door. De bouw start zodra alles binnen is — dáárom lukt het in één week.</p>
+        <p>Geen schrijfwerk nodig: je beantwoordt een tiental eenvoudige vragen over je zaak en mailt je foto's en logo gewoon door. De bouw start zodra alles binnen is. Dáárom lukt het in één week.</p>
       </div>
       <div class="step">
         <span class="mono">Stap 2</span>
@@ -464,7 +479,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       <div class="step">
         <span class="mono">Stap 3</span>
         <h3>Feedback &amp; online</h3>
-        <p>Eén ronde opmerkingen, ik werk af en je site gaat live op je eigen domeinnaam. Je ontvangt een factuur, excl. btw.</p>
+        <p>Eén ronde opmerkingen, ik werk af en je site gaat live op je eigen domeinnaam. Je krijgt een factuur van mijn vennootschap, met btw erop. Alle prijzen op deze pagina zijn exclusief btw.</p>
       </div>
     </div>
     <p class="process-note reveal">Geen vergaderingen, geen tussenpersonen: je werkt van begin tot einde rechtstreeks met de bouwer van je site.</p>
@@ -498,23 +513,25 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
 
         <fieldset>
           <legend>Je site</legend>
-          <label class="opt"><input type="radio" name="pakket" value="Start (1 pagina)" data-price="490" checked><span class="txt">Eén sterke pagina<em>Alles op één scrollpagina — genoeg voor de meeste zaken</em></span><b>€490</b></label>
-          <label class="opt"><input type="radio" name="pakket" value="Compleet (3 pagina's)" data-price="790"><span class="txt">Tot drie pagina's<em>Bv. home, aanbod en contact — extra taal gratis inbegrepen</em></span><b>€790</b></label>
+          <label class="opt"><input type="radio" name="pakket" value="Start (1 pagina)" data-price="490" checked><span class="txt">Eén sterke pagina<em>Alles op één scrollpagina, genoeg voor de meeste zaken</em></span><b>€490</b></label>
+          <label class="opt"><input type="radio" name="pakket" value="Compleet (3 pagina's)" data-price="790"><span class="txt">Tot drie pagina's<em>Bv. home, aanbod en contact. Extra taal gratis inbegrepen</em></span><b>€790</b></label>
         </fieldset>
 
-        <fieldset>
-          <legend>Erbij, als je het nodig hebt</legend>
+        <details class="opties">
+          <summary>Iets erbij nemen? <span>Bekijk de mogelijkheden</span></summary>
+          <fieldset>
           <label class="opt"><span class="txt" style="display:flex;align-items:center;flex-wrap:wrap">Extra pagina's
             <select id="paginas" aria-label="Aantal extra pagina's"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
             <em style="width:100%">€150 per pagina, bovenop je pakket</em></span><b id="pag-prijs">€0</b></label>
           <label class="opt"><input type="checkbox" class="o" data-price="150" value="Online afspraken boeken"><span class="txt">Online afspraken boeken<em>Klanten boeken zelf, gekoppeld aan je boekingstool</em></span><b>€150</b></label>
-          <label class="opt"><input type="checkbox" class="o" data-price="75" value="Volwaardige mailbox"><span class="txt">Volwaardige mailbox<em>Eigen inbox op info@jouwzaak.be — een doorstuuradres zit al gratis in je pakket</em></span><b>€75</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="75" value="Volwaardige mailbox"><span class="txt">Volwaardige mailbox<em>Eigen inbox op info@jouwzaak.be. Een doorstuuradres zit al gratis in je pakket</em></span><b>€75</b></label>
           <label class="opt"><input type="checkbox" class="o" data-price="75" value="QR-kaartje Google-reviews"><span class="txt">QR-kaartje voor Google-reviews<em>Je klant scant en laat meteen een review achter</em></span><b>€75</b></label>
           <label class="opt"><input type="checkbox" class="o" data-price="75" value="Betaalknop"><span class="txt">Betaalknop<em>Bv. cadeaubonnen verkopen, zonder webshop</em></span><b>€75</b></label>
           <label class="opt"><input type="checkbox" class="o" data-price="95" value="QR-menukaart horeca"><span class="txt">QR-menukaart voor horeca<em>Je menu op tafel via een QR-code</em></span><b>€95</b></label>
           <label class="opt"><input type="checkbox" class="o" id="taal" data-price="50" value="Extra taal"><span class="txt">Extra taal<em>Bv. Frans erbij</em></span><b id="taal-prijs">€50</b></label>
           <label class="opt"><input type="checkbox" class="o" data-price="150" value="Teksten laten schrijven"><span class="txt">Teksten volledig laten schrijven<em>Op basis van één telefoongesprek</em></span><b>€150</b></label>
-        </fieldset>
+          </fieldset>
+        </details>
 
         <div class="calc-total">
           <span>Jouw prijs</span>
@@ -522,7 +539,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
         </div>
         <p class="calc-sub">excl. btw · eenmalig · daarna €180 per jaar</p>
         <a class="btn btn-primary" href="#start" id="calc-cta">Deze prijs meenemen naar mijn aanvraag</a>
-        <p class="btw-note">Een berekening op basis van de standaardomvang — geen bindende offerte, maar wel het bedrag waarop we starten. Betaling: de helft bij de start, de helft zodra je site online staat. Afspraken, mailbox en betaalknop draaien op een gespecialiseerde dienst met een klein eigen abonnement op jouw naam, zodat jij altijd eigenaar blijft. Automatisaties reken ik apart — <a href="/automatisaties/" style="color:var(--blue)">bekijk wat kan</a>.</p>
+        <p class="btw-note">Een berekening op basis van de standaardomvang. Geen bindende offerte, maar wel het bedrag waarop we starten. Betaling: de helft bij de start, de helft zodra je site online staat. Afspraken, mailbox en betaalknop draaien op een gespecialiseerde dienst met een klein eigen abonnement op jouw naam, zodat jij altijd eigenaar blijft. Automatisaties reken ik apart, <a href="/automatisaties/" style="color:var(--blue)">bekijk wat kan</a>.</p>
       </div>
     </div>
   </div>
@@ -533,14 +550,14 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div class="reveal">
       <span class="eyebrow mono">Eén aanspreekpunt</span>
       <h2>Je werkt rechtstreeks met de bouwer.</h2>
-      <p>Geen accountmanagers, geen offertetraject, geen doorschuiven. Ik bouw al jaren software die elke dag in de praktijk draait — bestelsystemen, koppelingen met ERP, documentverwerking — en weet dus wat een zaak wél en niet nodig heeft om klanten te overtuigen. Kort op de bal, klare afspraken.</p>
+      <p>Geen accountmanagers, geen offertetraject, geen doorschuiven. Ik bouw al jaren software die elke dag in de praktijk draait: bestelsystemen, koppelingen met ERP, documentverwerking. Ik weet dus wat een zaak wél en niet nodig heeft om klanten te overtuigen. Kort op de bal, klare afspraken.</p>
     </div>
     <ul class="trust-points reveal">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Antwoord binnen één werkdag, ook na oplevering</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 4.5 7v5c0 4.5 3.2 7.6 7.5 8.5 4.3-.9 7.5-4 7.5-8.5V7L12 3.5Z"/></svg>Vaste prijs vooraf — geen verrassingen achteraf</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 4.5 7v5c0 4.5 3.2 7.6 7.5 8.5 4.3-.9 7.5-4 7.5-8.5V7L12 3.5Z"/></svg>Vaste prijs vooraf, geen verrassingen achteraf</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h9"/></svg>Klare afspraken over wat inbegrepen is en wat niet</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="9" rx="2"/></svg>Privacyverklaring inbegrepen — en geen cookiebanner nodig, want geen trackingcookies</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.5 12.5 8-8m-2.5 1.5 3 3m-6.5.5 2.5 2.5"/></svg>Site én domeinnaam zijn jouw eigendom — je zit nergens aan vast</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="9" rx="2"/></svg>Privacyverklaring inbegrepen en geen cookiebanner nodig, want geen trackingcookies</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.5 12.5 8-8m-2.5 1.5 3 3m-6.5.5 2.5 2.5"/></svg>Site én domeinnaam zijn jouw eigendom, je zit nergens aan vast</li>
     </ul>
   </div>
 </section>
@@ -552,7 +569,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div class="faq reveal">
       <details>
         <summary>Ik heb nog geen teksten of foto's.</summary>
-        <p>Teksten schrijf ik voor je uit op basis van een kort telefoongesprek (+€150). Voor foto's volstaan goede gsm-foto's meestal — ik help je kiezen welke werken.</p>
+        <p>Teksten schrijf ik voor je uit op basis van een kort telefoongesprek (+€150). Voor foto's volstaan goede gsm-foto's meestal. Ik help je kiezen welke werken.</p>
       </details>
       <details>
         <summary>Kan ik later iets laten aanpassen?</summary>
@@ -560,23 +577,23 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       </details>
       <details>
         <summary>Hoeveel pagina's krijg ik?</summary>
-        <p>Start is één sterke pagina; Compleet gaat tot drie — bijvoorbeeld home, je aanbod en contact. Extra pagina's kunnen altijd; zet ze in de berekening hierboven en je ziet je bedrag meteen.</p>
+        <p>Start is één sterke pagina; Compleet gaat tot drie: home, je aanbod en contact bijvoorbeeld. Extra pagina's kunnen altijd; zet ze in de berekening hierboven en je ziet je bedrag meteen.</p>
       </details>
       <details>
         <summary>Kunnen klanten online een afspraak boeken?</summary>
-        <p>Ja. Met de optie online afspraken (€150) koppel ik je site aan een boekingstool zoals Salonized of Calendly. Het abonnement van die tool sluit je zelf rechtstreeks af — zo betaal je nooit een tussenpersoon.</p>
+        <p>Ja. Met de optie online afspraken (€150) koppel ik je site aan een boekingstool zoals Salonized of Calendly. Het abonnement van die tool sluit je zelf rechtstreeks af, zo betaal je nooit een tussenpersoon.</p>
       </details>
       <details>
         <summary>Krijg ik een e-mailadres op mijn domein?</summary>
-        <p>Een doorstuuradres (info@jouwzaak.be naar je bestaande mailbox) zit gratis in elk pakket. Wil je een volledige mailbox, dan installeer ik die voor €75 bij een provider naar keuze — dat abonnement betaal je rechtstreeks.</p>
+        <p>Een doorstuuradres (info@jouwzaak.be naar je bestaande mailbox) zit gratis in elk pakket. Wil je een volledige mailbox, dan installeer ik die voor €75 bij een provider naar keuze. Dat abonnement betaal je rechtstreeks.</p>
       </details>
       <details>
-        <summary>Ik heb al een website — kan je die vernieuwen?</summary>
+        <summary>Ik heb al een website. Kan je die vernieuwen?</summary>
         <p>Ja, dat is zelfs de meest voorkomende start. Ik bouw je site opnieuw binnen het gewone pakket, en je bestaande domeinnaam verhuist gewoon mee, zonder onderbreking.</p>
       </details>
       <details>
         <summary>Van wie is de website daarna?</summary>
-        <p>Van jou. Site, teksten en domeinnaam zijn volledig jouw eigendom. Het jaarbedrag is jaarlijks opzegbaar — stop je, dan krijg je je domein en bestanden netjes mee.</p>
+        <p>Van jou. Site, teksten en domeinnaam zijn volledig jouw eigendom. Het jaarbedrag is jaarlijks opzegbaar. Stop je ermee, dan krijg je je domein en bestanden netjes mee.</p>
       </details>
       <details>
         <summary>Kan ik iets verkopen via mijn site, zoals cadeaubonnen?</summary>
@@ -584,7 +601,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       </details>
       <details>
         <summary>Ik wil een webshop.</summary>
-        <p>Daarvoor ben ik niet de juiste partner. Ik focus bewust op zakelijke websites zonder verkoopmodule — dat doe ik snel en goed; één betaalknop voor bv. cadeaubonnen kan wél (zie hierboven). Voor een echte webshop verwijs ik je met plezier door.</p>
+        <p>Dan zit je bij mij niet goed, en dat zeg ik liever meteen. Ik bouw zakelijke websites zonder verkoopmodule, en daar ben ik snel en scherp in. Wil je enkel cadeaubonnen of een vaste dienst online verkopen, dan volstaat de betaalknop hierboven. Voor een volwaardige webshop verwijs ik je graag door naar iemand die daar dagelijks mee bezig is.</p>
       </details>
       <details>
         <summary>Hoe verloopt de betaling?</summary>
@@ -592,7 +609,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       </details>
       <details>
         <summary>Wat heb je van mij nodig om te starten?</summary>
-        <p>Je beantwoordt een korte vragenlijst in gewone mensentaal — wie je bent, wat je doet, je prijzen en openingsuren — en stuurt je foto's en logo door. Geen schrijfwerk: je antwoorden vormen de basis van je webteksten. Zodra alles binnen is, sta je een week later online.</p>
+        <p>Je beantwoordt een korte vragenlijst in gewone mensentaal: wie je bent, wat je doet, je prijzen en openingsuren. Daarna stuur je je foto's en logo door. Geen schrijfwerk: je antwoorden vormen de basis van je webteksten. Zodra alles binnen is, sta je een week later online.</p>
       </details>
     </div>
   </div>
@@ -602,7 +619,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
   <div class="wrap">
     <span class="eyebrow mono reveal">Start je site</span>
     <h2 class="reveal">Vertel me over je zaak.</h2>
-    <p class="lead reveal">Vul dit in en je hoort binnen één werkdag van me. Vrijblijvend — je beslist pas na ons eerste contact.</p>
+    <p class="lead reveal">Vul dit in en je hoort binnen één werkdag van me. Vrijblijvend, je beslist pas na ons eerste contact.</p>
     <form class="form reveal" name="intake" method="POST" action="/bedankt/" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="intake">
       <p hidden><label>Niet invullen: <input name="bot-field"></label></p>
@@ -629,7 +646,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       <input type="hidden" name="configuratie" id="cfg-veld">
       <input type="hidden" name="prijsindicatie" id="prijs-veld">
       <p class="cfg-echo" id="cfg-echo"></p>
-      <button class="btn btn-primary" type="submit">Verstuur — je hoort van me</button>
+      <button class="btn btn-primary" type="submit">Verstuur je bericht</button>
     </form>
   </div>
 </section>
