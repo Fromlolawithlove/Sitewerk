@@ -84,7 +84,7 @@ form{padding:40px 0 90px}
   </div>
 </header>
 
-<form class="wrap" name="aanlevering" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form class="wrap" name="aanlevering" method="POST" action="/bedankt/" data-netlify="true" netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="aanlevering">
   <p hidden><label>Niet invullen: <input name="bot-field"></label></p>
 
@@ -169,8 +169,8 @@ form{padding:40px 0 90px}
     <div class="field">
       <label for="pakket">Pakket</label>
       <select id="pakket" name="pakket">
-        <option>Compleet — €950 (tot 3 pagina's, extra taal inbegrepen)</option>
-        <option>Start — €590 (één sterke pagina)</option>
+        <option>Compleet — €790 (tot 3 pagina's, extra taal inbegrepen)</option>
+        <option>Start — €490 (één sterke pagina)</option>
         <option>Weet ik nog niet</option>
       </select>
     </div>
@@ -185,6 +185,7 @@ form{padding:40px 0 90px}
         <label><input type="checkbox" name="opties" value="qr-menukaart"> QR-menukaart voor horeca (€95)</label>
         <label><input type="checkbox" name="opties" value="extra-taal"> Extra taal (€50)</label>
         <label><input type="checkbox" name="opties" value="teksten"> Teksten volledig laten schrijven (€150)</label>
+        <label><input type="checkbox" name="opties" value="automatisatie"> Een automatisatie erbij (vanaf €150)</label>
       </div>
     </div>
     <div class="field">

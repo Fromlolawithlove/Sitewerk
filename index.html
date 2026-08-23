@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>sitewerk. — Professionele website voor je zaak. Vaste prijs, online in één week.</title>
-<meta name="description" content="Een professionele website voor je zaak. Vaste prijzen vanaf €590 excl. btw, online binnen één week na aanlevering. Domeinnaam, hosting en Google-vindbaarheid inbegrepen.">
+<meta name="description" content="Een professionele website voor je zaak. Vaste prijzen vanaf €490 excl. btw, online binnen één week na aanlevering. Domeinnaam, hosting en Google-vindbaarheid inbegrepen.">
 <link rel="canonical" href="https://sitewerk.be/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="sitewerk">
 <meta property="og:locale" content="nl_BE">
 <meta property="og:title" content="Een professionele website voor je zaak — vaste prijs, online in één week">
-<meta property="og:description" content="Vaste prijzen vanaf €590 excl. btw — inclusief domeinnaam, hosting en Google-vindbaarheid.">
+<meta property="og:description" content="Vaste prijzen vanaf €490 excl. btw — inclusief domeinnaam, hosting en Google-vindbaarheid.">
 <meta property="og:url" content="https://sitewerk.be/">
 <meta property="og:image" content="https://sitewerk.be/og.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"sitewerk","url":"https://sitewerk.be/","email":"info@sitewerk.be","description":"Professionele websites voor kleine ondernemingen. Vaste prijzen vanaf €590, online binnen één week.","priceRange":"€590 - €950","areaServed":"BE","vatID":"BE0452335546"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"sitewerk","url":"https://sitewerk.be/","email":"info@sitewerk.be","description":"Professionele websites en automatisaties voor kleine ondernemingen. Vaste prijzen vanaf €490, online binnen één week.","priceRange":"€490 - €790","areaServed":"BE","vatID":"BE0452335546"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,6 +232,51 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
   padding:16px 20px;font-size:.95rem;
 }
 
+/* ---------- calculator ---------- */
+.calc-area{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;margin-top:48px;align-items:start}
+@media(max-width:880px){.calc-area{grid-template-columns:1fr}}
+.basis{
+  background:var(--blue);color:#fff;border-radius:20px;padding:40px 34px;
+  background-image:linear-gradient(145deg,#1F3FB5 0%,#152E8C 100%);
+  box-shadow:0 24px 60px rgba(20,44,133,.28);
+}
+.basis .mono{color:rgba(255,255,255,.65)}
+.basis-price{font-size:clamp(3rem,6vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1;margin:14px 0 4px}
+.basis-meta{color:rgba(255,255,255,.82);font-size:.93rem}
+.basis ul{list-style:none;margin-top:26px}
+.basis li{padding:10px 0;border-top:1px solid rgba(255,255,255,.16);font-size:.95rem;display:flex;gap:11px;align-items:flex-start}
+.basis li svg{width:17px;height:17px;flex:none;margin-top:4px;color:#A9BAF7}
+.basis-note{margin-top:24px;padding:14px 16px;background:rgba(255,255,255,.09);border-radius:12px;font-size:.9rem;color:rgba(255,255,255,.92)}
+
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px 30px}
+.calc h3{font-size:1.2rem;font-weight:800;letter-spacing:-.015em;margin-bottom:4px}
+.calc .lead{font-size:.92rem;color:var(--muted);margin-bottom:20px}
+.calc fieldset{border:none;margin-bottom:20px}
+.calc legend{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.opt{
+  display:flex;gap:12px;align-items:flex-start;cursor:pointer;
+  padding:12px 0;border-top:1px solid var(--line);font-size:.95rem;
+}
+.opt input[type=radio],.opt input[type=checkbox]{width:18px;height:18px;margin-top:3px;accent-color:var(--blue);flex:none}
+.opt .txt{flex:1}
+.opt .txt em{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:2px}
+.opt b{font-family:"IBM Plex Mono",monospace;font-size:.84rem;color:var(--blue);white-space:nowrap;margin-top:2px}
+.opt select{margin-left:8px;padding:3px 6px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.85rem;background:var(--bg)}
+.calc-total{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  margin-top:8px;padding:18px 20px;background:var(--tint);border-radius:14px;
+}
+.calc-total span{font-weight:600}
+.calc-total strong{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;color:var(--blue)}
+.calc-sub{font-size:.85rem;color:var(--muted);margin:8px 2px 20px}
+.calc .btn{width:100%;text-align:center}
+.calc .btw-note{margin-top:18px;font-size:.8rem;color:var(--muted)}
+.cfg-echo{
+  display:none;margin-top:4px;padding:14px 16px;background:#22262E;border:1px solid #383E49;
+  border-radius:12px;font-size:.9rem;color:#C9CDD2;
+}
+.cfg-echo b{color:#fff}
+
 /* ---------- trust ---------- */
 .trust{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -297,6 +342,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div class="nav-links">
       <a class="plain" href="#krijg">Wat je krijgt</a>
       <a class="plain" href="#prijs">Prijs</a>
+      <a class="plain" href="/automatisaties/">Automatisaties</a>
       <a class="plain" href="#vragen">Vragen</a>
       <a class="nav-cta" href="#start">Start je site</a>
     </div>
@@ -308,7 +354,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div>
       <span class="eyebrow mono reveal">Vaste prijzen · Online in één week · Eén aanspreekpunt</span>
       <h1 class="reveal">Een professionele website voor je zaak.</h1>
-      <p class="sub reveal">Online binnen één week na aanlevering van je teksten en foto's. Vaste prijzen <strong>vanaf €590 excl. btw</strong> — inclusief domeinnaam, hosting en Google-vindbaarheid.</p>
+      <p class="sub reveal">Online binnen één week na aanlevering van je teksten en foto's. Vaste prijzen <strong>vanaf €490 excl. btw</strong> — inclusief domeinnaam, hosting en Google-vindbaarheid.</p>
       <div class="cta-row reveal">
         <a class="btn btn-primary" href="#start">Start je site</a>
         <a class="btn btn-ghost" href="/voorbeeld/">Bekijk een voorbeeld</a>
@@ -427,53 +473,58 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
 
 <section class="section" id="prijs">
   <div class="wrap">
-    <span class="eyebrow mono reveal">Transparante prijzen</span>
-    <h2 class="section-title reveal">Twee pakketten. Vaste prijzen. Geen verrassingen.</h2>
-    <div class="price-area">
-      <div class="tier reveal">
-        <span class="mono">Start</span>
-        <div class="tier-price">€590</div>
-        <p class="tier-meta">excl. btw · eenmalig</p>
-        <ul class="tier-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén sterke pagina</li>
+    <span class="eyebrow mono reveal">Prijs</span>
+    <h2 class="section-title reveal">Vanaf €490. Wat het voor jou wordt, weet je in één minuut.</h2>
+    <p class="section-intro reveal">Geen offertetraject, geen wachten. Je stelt hieronder zelf samen wat je nodig hebt en ziet je bedrag meteen op het scherm.</p>
+
+    <div class="calc-area">
+      <div class="basis reveal">
+        <span class="mono">Instapprijs</span>
+        <div class="basis-price">€490</div>
+        <p class="basis-meta">excl. btw · eenmalig</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén sterke pagina, op maat van je zaak</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Domeinnaam en hosting, eerste jaar</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Google en Google Business opgezet</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén feedbackronde</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Online binnen één week na aanlevering</li>
         </ul>
+        <p class="basis-note"><strong>Vanaf het tweede jaar: €180 per jaar.</strong> Je site blijft online (hosting en domeinnaam inbegrepen) en je mag twee keer per jaar iets kleins laten aanpassen.</p>
       </div>
-      <div class="tier tier--featured reveal">
-        <span class="badge">Meest gekozen</span>
-        <span class="mono">Compleet</span>
-        <div class="tier-price">€950</div>
-        <p class="tier-meta">excl. btw · eenmalig</p>
-        <ul class="tier-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Tot drie pagina's — bv. home, aanbod, contact</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén extra taal inbegrepen (bv. Frans of Engels)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Domeinnaam en hosting, eerste jaar</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Google en Google Business opgezet</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Eén feedbackronde</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Online binnen één week na aanlevering</li>
-        </ul>
-      </div>
-      <div class="tier reveal">
-        <span class="mono">Opties</span>
-        <p class="opt-lead">Alleen als je het nodig hebt.</p>
-        <ul class="menu">
-          <li><div>Extra pagina</div> <span class="p">€150</span></li>
-          <li><div>Online afspraken boeken<span class="cap">koppeling met je boekingstool</span></div> <span class="p">€150</span></li>
-          <li><div>Volwaardige mailbox<span class="cap">eigen inbox op info@jouwzaak.be — het doorstuuradres zit al gratis in elk pakket</span></div> <span class="p">€75</span></li>
-          <li><div>QR-kaartje voor Google-reviews<span class="cap">klant scant en laat meteen een review achter</span></div> <span class="p">€75</span></li>
-          <li><div>Betaalknop<span class="cap">bv. cadeaubonnen verkopen, zonder webshop</span></div> <span class="p">€75</span></li>
-          <li><div>QR-menukaart voor horeca<span class="cap">je menu op tafel via een QR-code</span></div> <span class="p">€95</span></li>
-          <li><div>Extra taal<span class="cap">bv. Frans erbij — bij Compleet is de eerste extra taal al inbegrepen</span></div> <span class="p">€50</span></li>
-          <li><div>Teksten volledig laten schrijven</div> <span class="p">€150</span></li>
-          <li><div>Meerwerk per uur</div> <span class="p">€95/u</span></li>
-        </ul>
-        <p class="btw-note">Enkele opties (afspraken, mailbox, betaalknop) werken via een gespecialiseerde dienst met een klein eigen abonnement — dat staat op jouw naam, zodat jij altijd eigenaar blijft. Ik installeer alles voor je. Alle prijzen excl. btw, meerwerk altijd vooraf afgesproken (min. 30 min).</p>
+
+      <div class="calc reveal">
+        <h3>Stel je site samen</h3>
+        <p class="lead">Vink aan wat je wil. Het bedrag past zich meteen aan.</p>
+
+        <fieldset>
+          <legend>Je site</legend>
+          <label class="opt"><input type="radio" name="pakket" value="Start (1 pagina)" data-price="490" checked><span class="txt">Eén sterke pagina<em>Alles op één scrollpagina — genoeg voor de meeste zaken</em></span><b>€490</b></label>
+          <label class="opt"><input type="radio" name="pakket" value="Compleet (3 pagina's)" data-price="790"><span class="txt">Tot drie pagina's<em>Bv. home, aanbod en contact — extra taal gratis inbegrepen</em></span><b>€790</b></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Erbij, als je het nodig hebt</legend>
+          <label class="opt"><span class="txt" style="display:flex;align-items:center;flex-wrap:wrap">Extra pagina's
+            <select id="paginas" aria-label="Aantal extra pagina's"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+            <em style="width:100%">€150 per pagina, bovenop je pakket</em></span><b id="pag-prijs">€0</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="150" value="Online afspraken boeken"><span class="txt">Online afspraken boeken<em>Klanten boeken zelf, gekoppeld aan je boekingstool</em></span><b>€150</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="75" value="Volwaardige mailbox"><span class="txt">Volwaardige mailbox<em>Eigen inbox op info@jouwzaak.be — een doorstuuradres zit al gratis in je pakket</em></span><b>€75</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="75" value="QR-kaartje Google-reviews"><span class="txt">QR-kaartje voor Google-reviews<em>Je klant scant en laat meteen een review achter</em></span><b>€75</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="75" value="Betaalknop"><span class="txt">Betaalknop<em>Bv. cadeaubonnen verkopen, zonder webshop</em></span><b>€75</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="95" value="QR-menukaart horeca"><span class="txt">QR-menukaart voor horeca<em>Je menu op tafel via een QR-code</em></span><b>€95</b></label>
+          <label class="opt"><input type="checkbox" class="o" id="taal" data-price="50" value="Extra taal"><span class="txt">Extra taal<em>Bv. Frans erbij</em></span><b id="taal-prijs">€50</b></label>
+          <label class="opt"><input type="checkbox" class="o" data-price="150" value="Teksten laten schrijven"><span class="txt">Teksten volledig laten schrijven<em>Op basis van één telefoongesprek</em></span><b>€150</b></label>
+        </fieldset>
+
+        <div class="calc-total">
+          <span>Jouw prijs</span>
+          <strong id="totaal">€490</strong>
+        </div>
+        <p class="calc-sub">excl. btw · eenmalig · daarna €180 per jaar</p>
+        <a class="btn btn-primary" href="#start" id="calc-cta">Deze prijs meenemen naar mijn aanvraag</a>
+        <p class="btw-note">Een berekening op basis van de standaardomvang — geen bindende offerte, maar wel het bedrag waarop we starten. Betaling: de helft bij de start, de helft zodra je site online staat. Afspraken, mailbox en betaalknop draaien op een gespecialiseerde dienst met een klein eigen abonnement op jouw naam, zodat jij altijd eigenaar blijft. Automatisaties reken ik apart — <a href="/automatisaties/" style="color:var(--blue)">bekijk wat kan</a>.</p>
       </div>
     </div>
-    <p class="yearly reveal"><strong>Vanaf het tweede jaar: €180 per jaar.</strong> Daarvoor blijft je site gewoon online (hosting en domeinnaam inbegrepen) en mag je twee keer per jaar iets kleins laten aanpassen — je openingsuren, een prijs, een foto.</p>
   </div>
 </section>
 
@@ -482,7 +533,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div class="reveal">
       <span class="eyebrow mono">Eén aanspreekpunt</span>
       <h2>Je werkt rechtstreeks met de bouwer.</h2>
-      <p>Geen accountmanagers, geen offertetraject, geen doorschuiven. Ik ben zelf ondernemer en weet wat een zaak wél en niet nodig heeft om klanten te overtuigen. Kort op de bal, klare afspraken.</p>
+      <p>Geen accountmanagers, geen offertetraject, geen doorschuiven. Ik bouw al jaren software die elke dag in de praktijk draait — bestelsystemen, koppelingen met ERP, documentverwerking — en weet dus wat een zaak wél en niet nodig heeft om klanten te overtuigen. Kort op de bal, klare afspraken.</p>
     </div>
     <ul class="trust-points reveal">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Antwoord binnen één werkdag, ook na oplevering</li>
@@ -509,7 +560,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
       </details>
       <details>
         <summary>Hoeveel pagina's krijg ik?</summary>
-        <p>Start is één sterke pagina; Compleet gaat tot drie — bijvoorbeeld home, je aanbod en contact. Extra pagina's kunnen altijd, aan €150 per stuk.</p>
+        <p>Start is één sterke pagina; Compleet gaat tot drie — bijvoorbeeld home, je aanbod en contact. Extra pagina's kunnen altijd; zet ze in de berekening hierboven en je ziet je bedrag meteen.</p>
       </details>
       <details>
         <summary>Kunnen klanten online een afspraak boeken?</summary>
@@ -536,6 +587,10 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
         <p>Daarvoor ben ik niet de juiste partner. Ik focus bewust op zakelijke websites zonder verkoopmodule — dat doe ik snel en goed; één betaalknop voor bv. cadeaubonnen kan wél (zie hierboven). Voor een echte webshop verwijs ik je met plezier door.</p>
       </details>
       <details>
+        <summary>Hoe verloopt de betaling?</summary>
+        <p>De helft bij de start, de helft zodra je site online staat. Je krijgt een gewone factuur vanuit mijn vennootschap, met btw. Het jaarbedrag vanaf het tweede jaar factureer ik één keer per jaar.</p>
+      </details>
+      <details>
         <summary>Wat heb je van mij nodig om te starten?</summary>
         <p>Je beantwoordt een korte vragenlijst in gewone mensentaal — wie je bent, wat je doet, je prijzen en openingsuren — en stuurt je foto's en logo door. Geen schrijfwerk: je antwoorden vormen de basis van je webteksten. Zodra alles binnen is, sta je een week later online.</p>
       </details>
@@ -548,7 +603,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <span class="eyebrow mono reveal">Start je site</span>
     <h2 class="reveal">Vertel me over je zaak.</h2>
     <p class="lead reveal">Vul dit in en je hoort binnen één werkdag van me. Vrijblijvend — je beslist pas na ons eerste contact.</p>
-    <form class="form reveal" name="intake" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="form reveal" name="intake" method="POST" action="/bedankt/" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="intake">
       <p hidden><label>Niet invullen: <input name="bot-field"></label></p>
       <div class="field">
@@ -571,6 +626,9 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
         <label for="bericht">Vertel kort iets over je zaak</label>
         <textarea id="bericht" name="bericht" rows="4"></textarea>
       </div>
+      <input type="hidden" name="configuratie" id="cfg-veld">
+      <input type="hidden" name="prijsindicatie" id="prijs-veld">
+      <p class="cfg-echo" id="cfg-echo"></p>
       <button class="btn btn-primary" type="submit">Verstuur — je hoort van me</button>
     </form>
   </div>
@@ -599,6 +657,67 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
   els.forEach(function(el,i){
     el.style.transitionDelay = Math.min(i%4*70, 280) + 'ms';
     io.observe(el);
+  });
+})();
+
+/* prijsberekening */
+(function(){
+  var totaalEl = document.getElementById('totaal');
+  if (!totaalEl) return;
+  var paginas = document.getElementById('paginas');
+  var taal = document.getElementById('taal');
+  var taalPrijs = document.getElementById('taal-prijs');
+  var pagPrijs = document.getElementById('pag-prijs');
+  var opties = document.querySelectorAll('.o');
+  var pakketten = document.querySelectorAll('input[name="pakket"]');
+
+  function euro(n){ return '\u20AC' + n.toLocaleString('nl-BE'); }
+
+  function bereken(){
+    var pakket = document.querySelector('input[name="pakket"]:checked');
+    var compleet = pakket.value.indexOf('Compleet') === 0;
+    var totaal = parseInt(pakket.getAttribute('data-price'), 10);
+    var gekozen = [pakket.value];
+
+    var aantal = parseInt(paginas.value, 10) || 0;
+    var pagKost = aantal * 150;
+    totaal += pagKost;
+    pagPrijs.textContent = euro(pagKost);
+    if (aantal > 0) gekozen.push(aantal + ' extra pagina' + (aantal > 1 ? "'s" : ''));
+
+    taalPrijs.textContent = compleet ? 'gratis' : '\u20AC50';
+
+    opties.forEach(function(o){
+      if (!o.checked) return;
+      var prijs = parseInt(o.getAttribute('data-price'), 10);
+      if (o === taal && compleet) prijs = 0;
+      totaal += prijs;
+      gekozen.push(o.value + (prijs === 0 ? ' (inbegrepen)' : ''));
+    });
+
+    totaalEl.textContent = euro(totaal);
+    totaalEl.setAttribute('data-config', gekozen.join(', '));
+    totaalEl.setAttribute('data-bedrag', euro(totaal));
+  }
+
+  pakketten.forEach(function(r){ r.addEventListener('change', bereken); });
+  opties.forEach(function(o){ o.addEventListener('change', bereken); });
+  paginas.addEventListener('change', bereken);
+  bereken();
+
+  var cta = document.getElementById('calc-cta');
+  if (cta) cta.addEventListener('click', function(){
+    var cfg = totaalEl.getAttribute('data-config');
+    var bedrag = totaalEl.getAttribute('data-bedrag');
+    var cfgVeld = document.getElementById('cfg-veld');
+    var prijsVeld = document.getElementById('prijs-veld');
+    var echo = document.getElementById('cfg-echo');
+    if (cfgVeld) cfgVeld.value = cfg;
+    if (prijsVeld) prijsVeld.value = bedrag + ' excl. btw';
+    if (echo) {
+      echo.innerHTML = 'Je berekening gaat mee: <b>' + cfg + '</b> \u2014 <b>' + bedrag + '</b> excl. btw';
+      echo.style.display = 'block';
+    }
   });
 })();
 </script>
