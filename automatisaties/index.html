@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Automatisaties voor je zaak — vaste prijs per stuk · sitewerk.</title>
+<title>Sitewerk | Automatisaties voor je zaak, vaste prijs per stuk</title>
 <meta name="description" content="Automatisaties voor kleine ondernemingen: bevestigingsmails, afspraakherinneringen, reviewvragen, offerte-opvolging en documenten die zichzelf inlezen. Vaste prijs per stuk, vanaf €150 excl. btw.">
 <link rel="canonical" href="https://sitewerk.be/automatisaties/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="sitewerk">
 <meta property="og:locale" content="nl_BE">
-<meta property="og:title" content="Automatisaties voor je zaak — vaste prijs per stuk">
+<meta property="og:title" content="Automatisaties voor je zaak, vaste prijs per stuk">
 <meta property="og:description" content="Laat terugkerend werk vanzelf gebeuren. Vaste prijs per automatisatie, vanaf €150 excl. btw.">
 <meta property="og:url" content="https://sitewerk.be/automatisaties/">
 <meta property="og:image" content="https://sitewerk.be/og.png">
@@ -47,7 +47,14 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a.plain{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted);transition:color .2s}
 .nav-links a.plain:hover{color:var(--ink)}
-@media(max-width:720px){.nav-links a.plain{display:none}}
+.nav-links a.plain.actief{color:var(--ink);font-weight:700}
+@media(max-width:560px){
+  .nav-links{gap:16px}
+  .nav-links a.plain{font-size:.88rem}
+  .nav-cta{padding:10px 14px;font-size:.85rem}
+  .nav-inner{padding:14px 16px}
+  .wordmark img{height:26px!important}
+}
 .nav-cta{text-decoration:none;background:var(--ink);color:#fff;font-weight:600;font-size:.92rem;padding:11px 20px;border-radius:12px;transition:background .2s}
 .nav-cta:hover{background:var(--blue)}
 
@@ -137,17 +144,17 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <a class="wordmark" href="/"><img src="/logo.png" alt="Sitewerk" style="height:30px;display:block"></a>
     <div class="nav-links">
       <a class="plain" href="/">Websites</a>
-      <a class="plain" href="#prijzen">Prijzen</a>
+      <a class="plain actief" href="#top">Automatisaties</a>
       <a class="nav-cta" href="/#start">Vraag het aan</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="wrap">
     <span class="eyebrow mono reveal">Automatisaties · Vaste prijs per stuk</span>
     <h1 class="reveal">Het werk dat elke week terugkeert, hoef je niet elke week te doen.</h1>
-    <p class="sub reveal">Aanvragen overtypen, bevestigingen sturen, achter offertes bellen, om een review vragen. Kleine handelingen die samen uren kosten. Die zet ik één keer op — daarna gebeuren ze vanzelf. <strong>Vanaf €150 excl. btw</strong>, vaste prijs per automatisatie. Papierwerk dat zichzelf inleest kan ook — zie hieronder.</p>
+    <p class="sub reveal">Aanvragen overtypen, bevestigingen sturen, achter offertes bellen, om een review vragen. Kleine handelingen die samen uren kosten. Die zet ik één keer op en daarna gebeuren ze vanzelf. <strong>Vanaf €150 excl. btw</strong>, vaste prijs per automatisatie. Papierwerk dat zichzelf inleest kan ook, zie hieronder.</p>
     <div class="cta-row reveal">
       <a class="btn btn-primary" href="/#start">Vertel wat je elke week doet</a>
       <a class="btn btn-ghost" href="#prijzen">Bekijk de prijzen</a>
@@ -159,12 +166,12 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
   <div class="wrap">
     <span class="eyebrow mono reveal">Wat dat concreet is</span>
     <h2 class="section-title reveal">Geen software. Gewoon werk dat vanzelf gebeurt.</h2>
-    <p class="section-intro reveal">Je hoeft niets nieuws te leren en er komt geen extra programma bij. Alles gebeurt in de tools die je al gebruikt — je mailbox, je agenda, je overzicht.</p>
+    <p class="section-intro reveal">Je hoeft niets nieuws te leren en er komt geen extra programma bij. Alles gebeurt in de tools die je al gebruikt: je mailbox, je agenda, je overzicht.</p>
     <div class="cards reveal">
       <div class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg></div>
         <h3>Nooit meer overtypen</h3>
-        <p>Een aanvraag via je website komt automatisch in je overzicht of je agenda te staan — met naam, gemeente en wat de klant wil.</p>
+        <p>Een aanvraag via je website komt automatisch in je overzicht of je agenda te staan, met naam, gemeente en wat de klant wil.</p>
       </div>
       <div class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6.5h17v11h-17z"/><path d="m3.5 7 8.5 6.5L20.5 7"/></svg></div>
@@ -185,19 +192,24 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <div class="vlag reveal">
       <span class="mono">Het zwaardere werk</span>
       <h2>Documenten die zichzelf inlezen.</h2>
-      <p>Bestelbonnen, leveringsbonnen of leveranciersfacturen die binnenkomen als PDF, Excel of gewoon een foto — en die iemand daarna zit over te typen. Dat hoeft niet meer.</p>
+      <p>Bestelbonnen, leveringsbonnen of leveranciersfacturen die binnenkomen als PDF, Excel of gewoon een foto, en die iemand daarna zit over te typen. Dat hoeft niet meer.</p>
       <p><strong>Dit is geen theorie.</strong> Een versie hiervan draait vandaag elke dag bij een groothandel in huistextiel: bonnen worden ingelezen, artikelcodes herkend en rechtstreeks doorgegeven aan hun ERP-systeem.</p>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Elk document wordt automatisch uitgelezen: leverancier, referentie, alle regels</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Artikelcodes worden herkend en gekoppeld aan je eigen artikelnummers</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Prijzen en totalen worden gecontroleerd — wat afwijkt, wordt gemeld</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Prijzen en totalen worden gecontroleerd, wat afwijkt wordt gemeld</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Jij kijkt na en bevestigt. Er wordt nooit iets automatisch geboekt.</li>
       </ul>
       <div class="vlag-prijs">
-        <b>vanaf €1.500</b>
-        <span>Na een kort verkennend gesprek weet je exact wat het voor jouw documenten wordt. Verwerkingskosten daarna: enkele centen per document.</span>
+        <b>Proef: €250</b>
+        <span>Ik zet het op voor twintig van je eigen documenten, zodat je zwart op wit ziet wat eruit komt. Gaat het door, dan gaat dat bedrag van de prijs af.</span>
       </div>
-      <a class="btn" href="/#start">Vraag een verkennend gesprek</a>
+      <div class="vlag-prijs">
+        <b>vanaf €950</b>
+        <span>De volledige opzet, na de proef. Dan weten we allebei precies over hoeveel werk het gaat. Verwerkingskosten daarna: enkele centen per document.</span>
+      </div>
+      <p style="margin-top:22px;font-size:.95rem">Reken zelf even: hoeveel uur per week gaat er bij jou naar het overtypen van bonnen? Vermenigvuldig dat met vijftig weken en je weet meteen of dit de moeite is.</p>
+      <a class="btn" href="/#start">Vraag een proef aan</a>
     </div>
   </div>
 </section>
@@ -209,17 +221,17 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
     <p class="section-intro reveal">Je kiest wat je nodig hebt, per stuk. Geen abonnement bij mij, geen pakketten waar je in vast zit.</p>
     <div class="menu-card reveal">
       <ul class="menu">
-        <li class="bundel"><div><strong>Startpakket</strong> — bevestigingsmail + aanvragen in je overzicht + reviewvraag<span class="cap">de drie die het meest opleveren, samen. Los €540.</span></div> <span class="p">€450</span></li>
+        <li class="bundel"><div><strong>Startpakket</strong>: bevestigingsmail + aanvragen in je overzicht + reviewvraag<span class="cap">de drie die het meest opleveren, samen. Los €540.</span></div> <span class="p">€450</span></li>
         <li><div>Aanvragen automatisch in je overzicht<span class="cap">elke aanvraag komt in een overzicht of agenda, klaar om op te volgen</span></div> <span class="p">€195</span></li>
         <li><div>Automatische bevestigingsmail<span class="cap">je klant krijgt meteen een nette bevestiging in jouw naam</span></div> <span class="p">€150</span></li>
         <li><div>Reviewvraag na een job<span class="cap">een paar dagen later automatisch de vraag naar een Google-review</span></div> <span class="p">€195</span></li>
-        <li><div>Afspraakherinnering<span class="cap">de dag voordien een berichtje — minder klanten die niet komen opdagen</span></div> <span class="p">€195</span></li>
+        <li><div>Afspraakherinnering<span class="cap">de dag voordien een berichtje, minder klanten die niet komen opdagen</span></div> <span class="p">€195</span></li>
         <li><div>Terugkerende klanten vanzelf terughalen<span class="cap">na zes weken, een seizoen of een jaar automatisch een herinnering</span></div> <span class="p">€250</span></li>
         <li><div>Offerte-opvolging<span class="cap">geen antwoord na een week? Er vertrekt vanzelf een vriendelijke herinnering</span></div> <span class="p">€250</span></li>
         <li><div>Automatische factuurherinneringen<span class="cap">openstaande facturen worden opgevolgd zonder dat jij eraan denkt</span></div> <span class="p">€250</span></li>
         <li><div>Iets anders dat elke week terugkomt<span class="cap">je vertelt wat het is, ik zeg vooraf wat het kost</span></div> <span class="p">€95/u</span></li>
       </ul>
-      <p class="btw-note">Alle prijzen excl. btw; de helft bij de start, de helft zodra het draait. Sommige automatisaties draaien op een gespecialiseerde dienst met een klein eigen abonnement (enkele euro's per maand) — dat account staat op jouw naam, zodat jij altijd eigenaar blijft. Ik zeg vooraf of dat zo is en wat het kost.</p>
+      <p class="btw-note">Alle prijzen excl. btw; de helft bij de start, de helft zodra het draait. Sommige automatisaties draaien op een gespecialiseerde dienst met een klein eigen abonnement (enkele euro's per maand). Dat account staat op jouw naam, zodat jij altijd eigenaar blijft. Ik zeg vooraf of dat zo is en wat het kost.</p>
     </div>
   </div>
 </section>
@@ -264,7 +276,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
   <div class="wrap">
     <span class="eyebrow mono reveal">Aan de slag</span>
     <h2 class="reveal">Wat doe jij elke week opnieuw?</h2>
-    <p class="reveal">Vertel het in twee zinnen. Ik zeg je eerlijk of het de moeite is om te automatiseren — en zo niet, dan zeg ik dat ook.</p>
+    <p class="reveal">Vertel het in twee zinnen. Ik zeg je eerlijk of het de moeite is om te automatiseren, en zo niet, dan zeg ik dat ook.</p>
     <div class="reveal"><a class="btn btn-primary" href="/#start">Stel je vraag</a></div>
   </div>
 </section>
